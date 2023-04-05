@@ -6,17 +6,20 @@
                         if (strlen($login) <= 25){
                             if (preg_match('/[^A-Za-z0-9]/', $password)) {
                                 if (file_exists($login)){
-                                    break;
+                                    return 6;
                                 }else{
-                                    
-                                    file_put_contents("/var/www/html/users/".$login, $password);
-                                    return true;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+                                    $hash = password_hash("$password", PASSWORD_DEFAULT);
+                                    $poivre = "salade.txt" + $hash + "pates.txt"
+                                    file_put_contents("/var/www/html/users/".$login, $poivre);
+                                    return 0;
+                                } 
+                            } return 5;
+                        } return 4;
+                    } return 3;
+                } return 2;
+            } return 1;
         }  
+
+        create_user("toto", "azertyuiop@");
         
 ?>
