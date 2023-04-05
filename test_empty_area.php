@@ -1,5 +1,7 @@
 <?php
 
+    include("new.php");
+
     $ret1 = create_user("", "password!");
     $ret2 = create_user("username", "");
     $ret3 = create_user("", "");
