@@ -11,9 +11,9 @@
 
 
     if(($ret8 == 2) && ($ret11 == 2) && ($ret14 == 0)){
-        printf(true); 
+        printf("true"); 
     }else{
-        printf(false);
+        printf("false");
         printf($ret9);
         printf($ret11);
         printf($ret14);

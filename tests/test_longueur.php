@@ -14,9 +14,9 @@
 
 
     if(($ret6 == 0) && ($ret9 == 3) && ($ret13 == 4) && ($ret10 == 2)){
-        printf(true);
+        printf("true");
     }else{
-        printf(false);
+        printf("false");
         printf($ret6);
         printf($ret9);
         printf($ret10);
