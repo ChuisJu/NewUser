@@ -10,7 +10,7 @@
         if(!file_exists($userfile)){
             return 3;
         }
-        $userData = file($userFile, FILE_IGNORE_NEW_LINES);
+        $userData = file($userfile, FILE_IGNORE_NEW_LINES);
         if ($userData[1] !== $password) {
             return 4;
         }
