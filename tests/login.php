@@ -13,6 +13,3 @@
         printf($ret3);
         printf($ret4);
     }
-?>
-
-

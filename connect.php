@@ -1,6 +1,6 @@
 <?php
     function connect($login, $password){
-        $userfile = "users/" . $login;
+        $userfile = "/var/www/html/users/" . $login;
         if ((empty($login)) || (empty($password))){
             return 1;
         }
@@ -8,12 +8,13 @@
             return 2;
         }
         if(!file_exists($userfile)){
+            printf($userfile);
+            var_dump(file_exists($userfile));
             return 3;
         }
-        $userData = file($userfile, FILE_IGNORE_NEW_LINES);
-        if ($userData[1] !== $password) {
+        $userData = file_get_contents($userfile);
+        if ($userData !== $password) {
             return 4;
         }
-        return array('login' => $login, 'name' => $userData[0]);
+        return 0;
     }
-?>
