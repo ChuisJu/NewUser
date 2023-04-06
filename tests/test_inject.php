@@ -1,6 +1,6 @@
 <?php
 
-    include("new.php");
+    include("../new.php");
 
 
     $ret8 = create_user("' OR '1'='1", "password##");

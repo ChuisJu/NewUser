@@ -8,9 +8,13 @@
                                 if (file_exists($login)){
                                     return 6;
                                 }else{
-                                    $hash = password_hash("$password", PASSWORD_DEFAULT);
-                                    $poivre = "salade.txt" + $hash + "pates.txt"
-                                    file_put_contents("/var/www/html/users/".$login, $poivre);
+                                    $salt = openssl_random_pseudo_bytes(32);
+                                    $salt = base64_encode($salt);
+                                    $salt = str_replace('+', '.', $salt);
+                                    $salt = substr($salt, 0, 32);
+                                    $hashed_password = hash('sha256', $password . $salt);
+                                    $file_contents = $salt . "\n" . $hashed_password;
+                                    file_put_contents("/var/www/html/users/".$login, $file_contents);
                                     return 0;
                                 } 
                             } return 5;
@@ -22,4 +26,9 @@
 
         create_user("toto", "azertyuiop@");
         
+?>
+
+<?php
+  
+  
 ?>

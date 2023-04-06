@@ -1,6 +1,6 @@
 <?php
 
-include("new.php");
+include("../new.php");
 
 $ret5 = create_user("username$", "password");
 $ret7 = create_user("username", "passwor");

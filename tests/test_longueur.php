@@ -1,5 +1,5 @@
 <?php
-    include("new.php");
+    include("../new.php");
 
 
     $ret6 = create_user("username", "passworda*4097628372O3OOI5U");
