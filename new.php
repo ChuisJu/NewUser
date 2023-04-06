@@ -23,12 +23,4 @@
                 } return 2;
             } return 1;
         }  
-
-        create_user("toto", "azertyuiop@");
-        
-?>
-
-<?php
-  
-  
-?>
+        create_user("toto", "azertyuiop@"); 
