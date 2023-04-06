@@ -1,6 +1,6 @@
 <?php
     function connect($login, $password){
-        $userfile = "users/$login";
+        $userfile = "users/" . $login;
         if ((empty($login)) || (empty($password))){
             return 1;
         }
