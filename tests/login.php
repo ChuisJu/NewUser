@@ -1,5 +1,5 @@
 <?php
-    include ("connect.php");
+    include ("../connect.php");
     $ret1 = connect("admin", "Password1234!");
     $ret2 = connect("@//:User", "Motdepasse!");
     $ret3 = connect(" ", "Motdepasse!");
