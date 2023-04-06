@@ -8,13 +8,11 @@
                                 if (file_exists($login)){
                                     return 6;
                                 }else{
-                                    $salt = openssl_random_pseudo_bytes(32);
-                                    $salt = base64_encode($salt);
-                                    $salt = str_replace('+', '.', $salt);
-                                    $salt = substr($salt, 0, 32);
-                                    $hashed_password = hash('sha256', $password . $salt);
-                                    $file_contents = $salt . "\n" . $hashed_password;
-                                    file_put_contents("/var/www/html/users/".$login, $file_contents);
+                                    //$salt = openssl_random_pseudo_bytes(32);
+
+                                    
+
+                                    file_put_contents("/var/www/html/users/".$login, $password);
                                     return 0;
                                 } 
                             } return 5;
