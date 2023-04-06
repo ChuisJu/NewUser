@@ -7,7 +7,7 @@ $ret7 = create_user("username", "passwor");
 $ret12 = create_user("USERNAME", "password");
 $ret15 = create_user("USERNAME", "password!.");
 
-if(($ret1 == 2) && ($ret2 == 3) && ($ret3 == 5) && ($ret4 == 0)){
+if(($ret5 == 2) && ($ret7 == 3) && ($ret12 == 5) && ($ret15 == 0)){
     printf("true");
 }else{
     printf("false");
