@@ -7,7 +7,7 @@
         if (preg_match('/[^A-Za-z0-9]/', $login)) {
             return 2;
         }
-        if(!file_exits($userfile)){
+        if(!file_exists($userfile)){
             return 3;
         }
         $userData = file($userFile, FILE_IGNORE_NEW_LINES);
